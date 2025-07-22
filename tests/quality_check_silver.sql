@@ -1,3 +1,18 @@
+/*
+--==================================================================================
+silver.test script for data validation:
+--==================================================================================
+This script performs data consistency and validation checks on the 'silver' layer tables to ensure data 
+quality before promoting to the 'gold' layer.
+Key checks include:
+	1.Null/missing value identification
+	2.Duplicate detection
+	3.Business logic validation(eg. date consistency, value ranges)
+	4.Referential integrity between 'silver' tables
+ This will help ensure data relaiblity and traceability across downstream processes.
+--==================================================================================
+*/
+
 --==================================================================================
 --# Cleaning Customer Info Table
 --==================================================================================
