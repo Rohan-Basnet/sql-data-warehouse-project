@@ -1,19 +1,14 @@
 /*
 ==============================================================
-DDL Script: Create Schema 'silver'
-	  : Create Silver Tables
+DDL Script:  Create Silver Tables
 ==============================================================
 Script purpose: 
-	This script creates schema named 'silver' and tables in 'silver' schema, 
-	dropping the existing tables if exists. 
+	This script creates  tables in 'silver' schema, dropping
+	the existing tables if exists. 
 Run this script to re-define the DDL structure of 'silver' tables.
 ==============================================================
 */
--- Create schema silver
-IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'silver')
-    EXEC('CREATE SCHEMA silver');
 
--- Drop and create tables under silver schema
 IF OBJECT_ID('silver.crm_cust_info','U') IS NOT NULL
     DROP TABLE silver.crm_cust_info;
 CREATE TABLE silver.crm_cust_info(
