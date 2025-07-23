@@ -1,18 +1,13 @@
 /*
 ==============================================================
-DDL Script: Create database 'DataWarehouse'
-            Cretae schema 'bronze'
-            Create Bronze Tables
+DDL Script: Create Bronze Tables
 ==============================================================
 Script purpose:
-        This script creates database named 'DataWarehouse', schema named 'bronze' and tables in the 'bronze' schema, 
+        This script creates tables in the 'bronze' schema, 
         dropping the existing tables if exists.
 Run this script to re-define the DDL structure of 'bronze' tables.
 ==============================================================
 */
-
-CREATE DATABASE DataWarehouse;
-CREATE SCHEMA bronze;
 
 IF OBJECT_ID('bronze.crm_cust_info','U') IS NOT NULL
 	DROP TABLE bronze.crm_cust_info;
