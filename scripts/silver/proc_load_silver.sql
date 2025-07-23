@@ -13,6 +13,9 @@ Script Purpose:
 Parameters:
 	None.
 		This stored procedure doesnot accept any parameter or return values.
+
+Usage Exaample:
+	EXEC silver.load_silver;
 =========================================================================================
 */
 
