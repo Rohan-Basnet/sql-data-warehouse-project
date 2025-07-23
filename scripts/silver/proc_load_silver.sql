@@ -1,3 +1,21 @@
+/*
+========================================================================================
+Stored Procedure: Loads Silver Layer (Bronze -> Silver)
+========================================================================================
+Script Purpose:
+	This stored procedure performs ETL (Extract, Transform , Load) process to
+	laod the 'silver'schema tables from the 'bronze' schema.
+	Actions Performed:
+		-Truncates the target tables in 'Silver' schema to avoid duplicates Table
+		-Applies necessary transformations
+		-Loads the cleansed data form Bronze into Silver tables
+
+Parameters:
+	None.
+		This stored procedure doesnot accept any parameter or return values.
+=========================================================================================
+*/
+
 CREATE OR ALTER PROCEDURE silver.load_silver AS
 BEGIN
 	DECLARE @start_time DATETIME , @end_time DATETIME , @batch_start_time DATETIME ,@batch_end_time DATETIME;
@@ -80,7 +98,7 @@ BEGIN
 			END AS prd_line,   --Mapping product line codes to descriptive value
 			prd_start_dt,
 			DATEADD(DAY,-1,LEAD(prd_start_dt)   --Data Enrichment
-		OVER(PARTITION BY prd_key ORDER BY prd_start_dt)) AS prd_end_dt --Calculating end date as one day before the next start date
+			OVER(PARTITION BY prd_key ORDER BY prd_start_dt)) AS prd_end_dt --Calculating end date as one day before the next start date
 		FROM bronze.crm_prd_info;
 
 		SET @end_time = GETDATE();
@@ -153,17 +171,17 @@ BEGIN
 		gen
 		)
 		SELECT 
-		 CASE 
-			 WHEN cid LIKE 'NAS%' THEN SUBSTRING(cid,4,	LEN(cid)) --Remove NAS prefix if present
-			 ELSE cid
-		 END AS cid,
-		CASE WHEN bdate > GETDATE() OR bdate < '1925-01-01' THEN NULL
-			 ELSE bdate
-		END AS bdate, --Set future dates and date below '1925-01-01' to NULL
-		CASE WHEN UPPER(TRIM(gen)) IN ('F','FEMALE') THEN 'Female'
-			WHEN UPPER(TRIM(gen)) IN ('M','MALE') THEN 'Male'
-			 ELSE 'n/a'
-		END AS gen --Normalize gender values and handle unknown value
+			 CASE 
+				 WHEN cid LIKE 'NAS%' THEN SUBSTRING(cid,4,	LEN(cid)) --Remove NAS prefix if present
+				 ELSE cid
+			 END AS cid,
+			CASE WHEN bdate > GETDATE() OR bdate < '1925-01-01' THEN NULL
+				 ELSE bdate
+			END AS bdate, --Set future dates and date below '1925-01-01' to NULL
+			CASE WHEN UPPER(TRIM(gen)) IN ('F','FEMALE') THEN 'Female'
+				WHEN UPPER(TRIM(gen)) IN ('M','MALE') THEN 'Male'
+				 ELSE 'n/a'
+			END AS gen --Normalize gender values and handle unknown value
 		FROM bronze.erp_cust_az12;
 		SET @end_time = GETDATE();
 		PRINT'** INSERT DURATION:'+ CAST(DATEDIFF(second,@start_time,@end_time) AS NVARCHAR) +'seconds';
@@ -182,12 +200,12 @@ BEGIN
 		cntry
 		)
 		SELECT
-		REPLACE(cid,'-','') AS cid, -- Handle Invalid value
-		CASE WHEN TRIM(cntry) IN ('US','USA') THEN 'United States'
-			 WHEN TRIM(cntry) = 'DE' THEN 'Germany'
-			 WHEN cntry IS NULL OR cntry ='' THEN 'n/a'
-			 ELSE TRIM(cntry)
-		END AS cntry  -- Normalize country values and Handle NULL or missing values
+			REPLACE(cid,'-','') AS cid, -- Handle Invalid value
+			CASE WHEN TRIM(cntry) IN ('US','USA') THEN 'United States'
+				 WHEN TRIM(cntry) = 'DE' THEN 'Germany'
+				 WHEN cntry IS NULL OR cntry ='' THEN 'n/a'
+				 ELSE TRIM(cntry)
+			END AS cntry  -- Normalize country values and Handle NULL or missing values
 		FROM bronze.erp_loc_a101
 
 		SET @end_time = GETDATE();
@@ -209,10 +227,10 @@ BEGIN
 		maintenance
 		)
 		SELECT 
-		id,
-		cat,
-		subcat,
-		maintenance
+			id,
+			cat,
+			subcat,
+			maintenance
 		FROM bronze.erp_px_cat_g1v2
 
 		SET @end_time = GETDATE();
@@ -233,3 +251,6 @@ BEGIN
 		PRINT'============================================================'
 	END CATCH
 END	
+
+
+  
