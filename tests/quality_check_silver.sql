@@ -1,6 +1,6 @@
 /*
 --==================================================================================
-silver.test script for data validation:
+Quality Checks
 --==================================================================================
 This script performs data consistency and validation checks on the 'silver' layer tables to ensure data 
 quality before promoting to the 'gold' layer.
