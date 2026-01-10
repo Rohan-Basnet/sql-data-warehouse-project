@@ -1,3 +1,15 @@
+/*
+--==================================================================================
+silver.test script for data validation:
+--==================================================================================
+This script performs quality checks to ensure data valididty,consistiency and 
+reliability of 'gold' layer.This checks ensures
+	1.Uniqueness of the surrogate key
+	2.
+	
+ This will help ensure data relaiblity and traceability across downstream processes.
+--==================================================================================
+*/
 --==================================================================================
 --# Checking 'silver.crm_cust_info'
 --==================================================================================
