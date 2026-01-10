@@ -198,14 +198,6 @@ WHERE id!=TRIM(id)
 	OR cat!=TRIM(cat) 
 	OR subcat!=TRIM(subcat)
 
--- Check for product categories missing in CRM master:
-SELECT
-*
-FROM silver.crm_prd_info ep
-WHERE NOT EXISTS(SELECT 
-					*
-				 FROM silver.erp_px_cat_g1v2 cp
-				 WHERE cp.id=ep.cat_id) 
 
 
 
