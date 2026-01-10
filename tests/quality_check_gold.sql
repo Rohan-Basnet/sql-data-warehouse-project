@@ -1,15 +1,15 @@
 /*
 --==================================================================================
-silver.test script for data validation:
+Quality Checks
 --==================================================================================
 This script performs quality checks to ensure validity,consistency and 
 reliability of data in 'gold' layer.This checks ensures
-	-Uniqueness of the surrogate key
-	-Referential integrity between fact and dimension tables
-	-Validation of relationships in the data model for analytical purpose
+	-Uniqueness of the surrogate key in dimension tables.
+	-Referential integrity between fact and dimension tables.
+	-Validation of relationships in the data model for analytical purpose.
 	
 Usage Notes:
-	-
+	-Troubleshoot and rectify any detected anamolies.
 --==================================================================================
 */
 --==================================================================================
