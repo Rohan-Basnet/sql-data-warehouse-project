@@ -1,5 +1,4 @@
-Markdown
-# 📊 End-to-End Data Warehouse & Analytics Project
+# 📊 Data Warehouse Project
 
 ## 🚀 Project Overview
 This project demonstrates a professional end-to-end data warehousing solution. It focuses on the integration of fragmented data from **ERP** and **CRM** systems, transforming raw CSV files into a centralized, business-ready **Star Schema** to drive actionable insights.
@@ -75,4 +74,4 @@ I am a Data Engineering enthusiast focused on building clean, scalable data arch
 
 ## 📫 Connect with me: [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rohan-basnet-74b95b305/)
 
-## ⚖️ This project is licensed under the MIT License.
+⚖️ This project is licensed under the MIT License.
