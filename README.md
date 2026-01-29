@@ -24,10 +24,8 @@ The project follows the **Medallion Architecture**, ensuring a structured flow o
 * **Data Quality:** Automated cleaning and reconciliation across sources.
 * **Business Intelligence:** SQL-based analytics focusing on Customer Behavior, Product Performance, and Sales Trends.
 
----
-
 ## 📂 Repository Structure
-```text
+
 data-warehouse-project/
 ├── datasets/            # Raw ERP and CRM CSV files
 ├── docs/                # Architecture diagrams and Data Catalog
@@ -39,7 +37,6 @@ data-warehouse-project/
 └── requirements.txt     # Dependencies
 
 ---
-
 ## 🛠️ Getting Started
 
 ### Prerequisites
@@ -48,9 +45,12 @@ data-warehouse-project/
 
 ### Installation & Setup
 
-1. **Clone the Repository:**
+1. **Clone the Repository**
+   Open your terminal or command prompt and run:
    ```bash
    git clone [https://github.com/your-username/data-warehouse-project.git](https://github.com/your-username/data-warehouse-project.git)
+
+
 
 
 
