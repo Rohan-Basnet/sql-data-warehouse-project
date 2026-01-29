@@ -1,3 +1,4 @@
+Markdown
 # Data Warehouse & Analytics Project
 
 ## 🚀 Overview
@@ -8,19 +9,9 @@ This project demonstrates an end-to-end data warehousing solution, transforming 
 ## 🏗️ Data Architecture
 The project follows the **Medallion Architecture**, ensuring a structured flow of data through three distinct stages:
 
-
-
 * **Bronze Layer (Raw):** Ingests raw CSV files from source systems into SQL Server without modifications.
 * **Silver Layer (Cleaned):** Standardizes data types, handles nulls, and removes duplicates.
 * **Gold Layer (Analytical):** Houses business-ready data modeled into a **Star Schema** optimized for BI tools.
-
----
-
-## 📖 Key Features & Objectives
-* **ETL Pipelines:** Automated scripts for seamless data movement.
-* **Data Modeling:** Implementation of a Star Schema (Fact & Dimension tables).
-* **Data Quality:** Automated cleaning and reconciliation across sources.
-* **Business Intelligence:** SQL-based analytics focusing on Customer Behavior, Product Performance, and Sales Trends.
 
 ---
 
@@ -28,15 +19,44 @@ The project follows the **Medallion Architecture**, ensuring a structured flow o
 
 ```text
 data-warehouse-project/
-├── datasets/            # Raw ERP and CRM CSV files (Input Data)
-├── docs/                # Architecture diagrams, ERDs, and Data Catalog
-│   ├── data_flow.drawio
-│   └── data_catalog.md
-├── scripts/             # SQL Transformation Scripts (Core Logic)
-│   ├── bronze/          # DDL for raw data ingestion
-│   ├── silver/          # Cleaning, Deduplication, & Normalization
-│   └── gold/            # Final Star Schema (Facts & Dimensions)
-├── tests/               # SQL scripts for data validation & quality checks
-├── .gitignore           # Files to exclude from Git
-├── LICENSE              # Legal usage rights (MIT)
-└── requirements.txt     # Environment dependencies
+├── datasets/            # Raw ERP and CRM CSV files
+├── docs/                # Architecture diagrams and Data Catalog
+├── scripts/             # SQL Transformation Scripts
+│   ├── bronze/          # Load raw data
+│   ├── silver/          # Data cleansing
+│   └── gold/            # Final Star Schema
+├── tests/               # Data quality scripts
+└── requirements.txt     # Dependencies
+
+🛠️ Getting Started
+1. Prerequisites
+SQL Server Management Studio (SSMS) or Azure Data Studio.
+
+Basic understanding of SQL and Data Warehousing concepts.
+
+2. Installation & Setup
+Step A: Clone the Repository
+Bash
+git clone [https://github.com/your-username/data-warehouse-project.git](https://github.com/your-username/data-warehouse-project.git)
+Step B: Transform & Model
+Run the silver layer scripts to clean and standardize the data.
+
+Run the gold layer scripts to create the final analytical Star Schema.
+
+👤 About Me
+Hi, I'm [Your Name] 👋
+I am a Data Engineering enthusiast focused on building clean, scalable data architectures. I enjoy solving complex logic puzzles and transforming raw data into meaningful business stories.
+
+🔭 Working on: End-to-end SQL Data Warehousing.
+
+🌱 Learning: Cloud Architecture and Python for Data Engineering.
+
+📫 Connect with me: LinkedIn | Portfolio
+
+📊 Documentation Links
+Data Catalog – Metadata and field descriptions.
+
+Naming Conventions – Project standards.
+
+⚖️ License
+This project is licensed under the MIT License.
