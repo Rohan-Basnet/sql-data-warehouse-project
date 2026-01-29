@@ -1,3 +1,4 @@
+Markdown
 # 📊 End-to-End Data Warehouse & Analytics Project
 
 ## 🚀 Project Overview
@@ -6,47 +7,67 @@ This project demonstrates a professional end-to-end data warehousing solution. I
 ---
 
 ## 🏗️ Data Architecture
-The project implements a **Medallion Architecture**, ensuring a structured flow and high data quality:
+The project follows the **Medallion Architecture**, providing a clear separation of concerns:
 
-* **🟫 Bronze (Raw):** Landing zone for raw ingestion from ERP and CRM CSV files.
-* **🥈 Silver (Cleansed):** Data standardization, deduplication, and cleansing.
-* **🥇 Gold (Analytical):** Final dimensional model (Fact & Dimension tables) optimized for BI tools.
-
----
-
-## 🎯 Project Requirements
-
-### **Objective**
-Develop a modern data warehouse using **SQL Server** to consolidate sales and customer data, enabling data-driven decision-making.
-
-### **Specifications**
-* **Data Sources:** CSV-based data from ERP (Sales/Products) and CRM (Customer info).
-* **Data Quality:** Implementation of cleaning logic to resolve structural and formatting inconsistencies.
-* **Integration:** Unified data model designed for complex analytical queries.
-* **Scope:** Focus on the latest data state (Historization/SCD not required for this iteration).
-* **Documentation:** Comprehensive metadata and data lineage tracking.
+| Layer | Status | Purpose |
+| :--- | :--- | :--- |
+| **🟫 Bronze** | Raw | Ingests data "as-is" from CSV sources into the `bronze` schema. |
+| **🥈 Silver** | Cleansed | Handles data type casting, trims whitespace, and removes duplicates. |
+| **🥇 Gold** | Curated | Final Star Schema (Facts & Dimensions) optimized for Power BI/Tableau. |
 
 ---
 
-## 🛠️ Tech Stack & Tools
-* **Database:** Microsoft SQL Server
-* **Client Interface:** SQL Server Management Studio (SSMS) or Azure Data Studio
-* **Language:** T-SQL (Transact-SQL)
-* **Data Modeling:** Dimensional Modeling (Star Schema)
+## 🎯 Project Requirements & Specifications
+
+### **1. Objective**
+Consolidate sales and customer data from disparate systems into a single "Source of Truth" using **SQL Server**.
+
+### **2. Technical Scope**
+* **Data Sources:** CSV exports from ERP (Sales, Products) and CRM (Customers).
+* **Transformation:** Standardization of date formats, handling NULL values, and mapping related keys.
+* **Modeling:** Implementation of a **Star Schema** (Fact & Dimension tables).
+* **Historical Scope:** Focuses on the current snapshot; no SCD Type 2 tracking is applied.
 
 ---
 
-## 🚀 Getting Started
 
-### 1. Prerequisites
-Ensure you have **SQL Server** and **SSMS** installed on your local machine.
+## 🛠️ Tech Stack
+* **Engine: Microsoft SQL Server
 
-### 2. Installation & Setup
-Clone the repository and execute the SQL scripts in the following order:
+* **Interface: SSMS / Azure Data Studio
 
-1.  **`bronze_layer.sql`**: Creates the environment and loads raw data.
-2.  **`silver_layer.sql`**: Performs data transformation and quality checks.
-3.  **`gold_layer.sql`**: Finalizes the Star Schema for reporting.
+* **Language: T-SQL
 
-```bash
-git clone [https://github.com/rohan-basnet/your-repo-name.git](https://github.com/rohan-basnet/your-repo-name.git)
+Design: Dimensional Modeling
+
+🚀 Getting Started
+1. Prerequisites
+SQL Server 2019 or later.
+
+SQL Server Management Studio (SSMS).
+
+2. Deployment
+Execute the scripts in the following order:
+
+01_bronze_layer.sql: Run this to create the database and load raw data.
+
+02_silver_layer.sql: Run this to cleanse and standardize the raw data.
+
+03_gold_layer.sql: Run this to build the final analytical layer.
+
+📊 Key Transformations Applied
+Data Cleaning: Used TRIM(), ISNULL(), and CASE statements to handle missing or messy data.
+
+Format Standardization: Converted varied date strings into standard DATE types.
+
+Relationship Mapping: Created Surrogate Keys to link ERP and CRM data efficiently.
+
+👤 About Me
+Hi, I'm Rohan Basnet 👋
+I am a Data Engineering enthusiast focused on building clean, scalable data architectures. I enjoy the challenge of turning raw, messy data into meaningful business stories.
+
+🔭 Working on: Advanced SQL Data Warehousing & ETL Automation.
+
+📫 Connect with me: LinkedIn
+
+⚖️ This project is licensed under the MIT License.
