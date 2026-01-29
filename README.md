@@ -14,24 +14,6 @@ The project follows the **Medallion Architecture**:
 
 ---
 
-## 📂 Repository Structure
-
-
-```text
-data-warehouse-project/
-├── datasets/            # Raw CSV files
-├── docs/                # Diagrams and Catalog
-├── scripts/             # SQL Transformation Scripts
-│   ├── bronze/          # Load raw data
-│   ├── silver/          # Data cleansing
-│   └── gold/            # Final Star Schema
-├── tests/               # Quality scripts
-└── requirements.txt     # Dependencies
-
----
-
-```markdown
----
 
 ## 🛠️ Getting Started
 1. **Prerequisites**: SQL Server Management Studio (SSMS) or Azure Data Studio.
