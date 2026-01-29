@@ -1,33 +1,32 @@
-Markdown
 # Data Warehouse & Analytics Project
 
 ## 🚀 Overview
-This project demonstrates an end-to-end data warehousing solution, transforming raw ERP and CRM data into actionable business insights. It showcases industry-standard practices in **Data Engineering**, **ETL Pipeline Development**, and **Analytical Modeling**.
+This project demonstrates an end-to-end data warehousing solution, transforming raw ERP and CRM data into actionable business insights.
 
 ---
 
 ## 🏗️ Data Architecture
-The project follows the **Medallion Architecture**, ensuring a structured flow of data through three distinct stages:
+The project follows the **Medallion Architecture**:
 
-* **Bronze Layer (Raw):** Ingests raw CSV files from source systems into SQL Server without modifications.
-* **Silver Layer (Cleaned):** Standardizes data types, handles nulls, and removes duplicates.
-* **Gold Layer (Analytical):** Houses business-ready data modeled into a **Star Schema** optimized for BI tools.
+* **Bronze Layer:** Raw data ingestion.
+* **Silver Layer:** Data cleansing and standardization.
+* **Gold Layer:** Business-ready Star Schema.
 
 ---
 
 ## 📂 Repository Structure
 
+
 ```text
 data-warehouse-project/
-├── datasets/            # Raw ERP and CRM CSV files
-├── docs/                # Architecture diagrams and Data Catalog
+├── datasets/            # Raw CSV files
+├── docs/                # Diagrams and Catalog
 ├── scripts/             # SQL Transformation Scripts
 │   ├── bronze/          # Load raw data
 │   ├── silver/          # Data cleansing
 │   └── gold/            # Final Star Schema
-├── tests/               # Data quality scripts
+├── tests/               # Quality scripts
 └── requirements.txt     # Dependencies
-
 🛠️ Getting Started
 1. Prerequisites
 SQL Server Management Studio (SSMS) or Azure Data Studio.
