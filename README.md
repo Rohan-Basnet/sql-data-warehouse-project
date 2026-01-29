@@ -27,40 +27,19 @@ The project follows the **Medallion Architecture**, ensuring a structured flow o
 ---
 
 ## 📂 Repository Structure
-```text
 data-warehouse-project/
-├── datasets/            # Raw ERP and CRM CSV files
-├── docs/                # Architecture diagrams and Data Catalog
-├── scripts/             # SQL Transformation Scripts
-│   ├── bronze/          # Load raw data
-│   ├── silver/          # Data cleansing
-│   └── gold/            # Final Star Schema
-├── tests/               # Data quality scripts
-└── requirements.txt     # Dependencies
-'''
-🛠️ Getting Started
-1. Prerequisites
-SQL Server Management Studio (SSMS) or Azure Data Studio.
-
-Basic understanding of SQL and Data Warehousing concepts.
-
-2. Installation & Setup
-Step A: Clone the Repository
-Open your terminal or command prompt and run:
-
-Bash
-git clone [https://github.com/your-username/data-warehouse-project.git](https://github.com/your-username/data-warehouse-project.git)
-Step B: Initialize Database
-Execute the SQL scripts located in scripts/bronze/ to establish the initial tables.
-
-Step C: Ingest Data
-Import the raw CSV files from the /datasets folder into your SQL Server instance using the Import Flat File wizard or a BULK INSERT command.
-
-Step D: Transform & Model
-
-Run the silver layer scripts to clean and standardize the data.
-
-Run the gold layer scripts to create the final analytical Star Schema.
+├── datasets/            # Raw ERP and CRM CSV files (Input Data)
+├── docs/                # Architecture diagrams, ERDs, and Data Catalog
+│   ├── data_flow.drawio
+│   └── data_catalog.md
+├── scripts/             # SQL Transformation Scripts (Core Logic)
+│   ├── bronze/          # DDL for raw data ingestion
+│   ├── silver/          # Cleaning, Deduplication, & Normalization
+│   └── gold/            # Final Star Schema (Facts & Dimensions)
+├── tests/               # SQL scripts for data validation & quality checks
+├── .gitignore           # Files to exclude from Git (e.g., local logs)
+├── LICENSE              # Legal usage rights (MIT)
+└── requirements.txt     # Environment dependencies
 
 📊 Documentation Links
 Data Catalog – Detailed metadata and field descriptions.
