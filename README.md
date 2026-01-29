@@ -36,7 +36,8 @@ data-warehouse-project/
 │   ├── silver/          # Data cleansing
 │   └── gold/            # Final Star Schema
 ├── tests/               # Data quality scripts
-└── requirements.txt     # Dependencies <br>
+└── requirements.txt     # Dependencies
+'''
 🛠️ Getting Started
 1. Prerequisites
 SQL Server Management Studio (SSMS) or Azure Data Studio.
