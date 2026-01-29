@@ -1,78 +1,65 @@
-Data Warehouse and Analytics Project
-Welcome to the Data Warehouse and Analytics Project repository! 
-🚀 This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
+Data Warehouse & Analytics Project
+🚀 Overview
+This project demonstrates a end-to-end data warehousing solution, transforming raw ERP and CRM data into actionable business insights. It showcases industry-standard practices in Data Engineering, ETL Pipeline Development, and Analytical Modeling.
 
 🏗️ Data Architecture
-The data architecture for this project follows Medallion Architecture Bronze, Silver, and Gold layers:
+The project follows the Medallion Architecture, ensuring a structured flow of data through three distinct stages:
 
-Bronze Layer: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
-Silver Layer: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
-Gold Layer: Houses business-ready data modeled into a star schema required for reporting and analytics.
+Bronze Layer (Raw): Ingests raw CSV files from source systems (ERP/CRM) into SQL Server without modifications.
 
-📖 Project Overview
-This project involves:
+Silver Layer (Cleaned): Standardizes data types, handles nulls, and removes duplicates to ensure a "single source of truth."
 
-1.Data Architecture: Designing a Modern Data Warehouse Using Medallion Architecture Bronze, Silver, and Gold layers.
-2.ETL Pipelines: Extracting, transforming, and loading data from source systems into the warehouse.
-3.Data Modeling: Developing fact and dimension tables optimized for analytical queries.
-4.Analytics & Reporting: Creating SQL-based reports and dashboards for actionable insights.
+Gold Layer (Analytical): Houses business-ready data modeled into a Star Schema (Fact and Dimension tables) optimized for BI tools.
 
-🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
+📖 Key Features & Objectives
+ETL Pipelines: Automated extraction and transformation scripts for seamless data movement.
 
-SQL Development
-Data Architect
-Data Engineering
-ETL Pipeline Developer
-Data Modeling
-Data Analytics
-🛠️ Important Links & Tools:
-Everything is for Free!
+Data Modeling: Implementation of a Star Schema for high-performance analytical queries.
 
-🚀 Project Requirements
-Building the Data Warehouse (Data Engineering)
+Data Quality Assurance: Cleaning and reconciling data across multiple source systems.
 
-Objective:
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
+Business Intelligence: SQL-based analytics focusing on:
 
-Specifications
-Data Sources: Import data from two source systems (ERP and CRM) provided as CSV files.
-Data Quality: Cleanse and resolve data quality issues prior to analysis.
-Integration: Combine both sources into a single, user-friendly data model designed for analytical queries.
-Scope: Focus on the latest dataset only; historization of data is not required.
-Documentation: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
-BI: Analytics & Reporting (Data Analysis)
-Objective
+Customer Behavior: Segmenting and identifying high-value customers.
 
-Develop SQL-based analytics to deliver detailed insights into:
+Product Performance: Tracking top-selling items and categories.
 
-Customer Behavior
-Product Performance
-Sales Trends
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
-
-For more details, refer to docs/requirements.md.
+Sales Trends: Analyzing growth and seasonal patterns.
 
 📂 Repository Structure
+Plaintext
 data-warehouse-project/
-│
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
-│
-├── docs/                               # Project documentation and architecture details
-│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
-│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
-│
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
-│
-├── tests/                              # Test scripts and quality files
-│
-├── README.md                           # Project overview and instructions
-├── LICENSE                             # License information for the repository
-├── .gitignore                          # Files and directories to be ignored by Git
-└── requirements.txt                    # Dependencies and requirements for the project
+├── datasets/            # Raw ERP and CRM CSV files
+├── docs/                # Architecture diagrams (.drawio) and Data Catalog
+├── scripts/             # SQL Transformation Scripts
+│   ├── bronze/          # Load raw data
+│   ├── silver/          # Data cleansing & standardization
+│   └── gold/            # Final Star Schema creation
+├── tests/               # Data quality and validation scripts
+└── requirements.txt     # Necessary dependencies
+🛠️ Getting Started
+Prerequisites
+SQL Server Management Studio (SSMS) or Azure Data Studio.
+
+Basic understanding of SQL and Data Warehousing concepts.
+
+Installation & Setup
+Clone the Repository:
+
+Bash
+git clone https://github.com/your-username/data-warehouse-project.git
+Initialize Database: Run the scripts in scripts/bronze/ to create the initial tables.
+
+Load Data: Import the CSV files from the /datasets folder into your SQL instance.
+
+Transform: Execute the silver scripts followed by the gold scripts to build your analytical model.
+
+📊 Documentation Links
+Data Catalog - Field descriptions and metadata.
+
+Naming Conventions - Best practices used for this project.
+
+Architecture Diagrams: View the logic in docs/data_architecture.drawio.
+
+⚖️ License
+This project is licensed under the MIT License - see the LICENSE file for details.
