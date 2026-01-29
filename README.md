@@ -31,7 +31,6 @@ Consolidate sales and customer data from disparate systems into a single "Source
 ---
 
 ## 📂 Repository Structure
-This tree outlines the organization of the SQL scripts and documentation within this project.
 
 ```text
 data-warehouse-project/
@@ -59,9 +58,9 @@ data-warehouse-project/
 ## 🛠️ Tech Stack
 * **Engine:** Microsoft SQL Server
 
-* **Interface:** SSMS / Azure Data Studio
+* **Interface:** SSMS 
 
-* **Language:** T-SQL
+* **Language:** SQL
 
 * **Design:** Dimensional Modeling
 
