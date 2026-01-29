@@ -73,6 +73,6 @@ Hi, I'm Rohan Basnet 👋
 I am a Data Engineering enthusiast focused on building clean, scalable data architectures. I enjoy the challenge of turning raw, messy data into meaningful business stories.
 
 
-## 📫 Connect with me:[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rohan-basnet)
+## 📫 Connect with me: [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rohan-basnet-74b95b305/)
 
 ## ⚖️ This project is licensed under the MIT License.
