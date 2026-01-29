@@ -32,13 +32,13 @@ Consolidate sales and customer data from disparate systems into a single "Source
 
 
 ## 🛠️ Tech Stack
-* **Engine**: Microsoft SQL Server
+* **Engine:** Microsoft SQL Server
 
-* **Interface**: SSMS / Azure Data Studio
+* **Interface:** SSMS / Azure Data Studio
 
-* **Language**: T-SQL
+* **Language:** T-SQL
 
-* **Design**: Dimensional Modeling
+* **Design:** Dimensional Modeling
 
 ---
 
@@ -72,10 +72,7 @@ Execute the scripts in the following order:
 Hi, I'm Rohan Basnet 👋
 I am a Data Engineering enthusiast focused on building clean, scalable data architectures. I enjoy the challenge of turning raw, messy data into meaningful business stories.
 
-* **🔭 Working on**: Advanced SQL Data Warehousing & ETL Automation.
 
---
-
-## 📫 Connect with me: LinkedIn
+## 📫 Connect with me:[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rohan-basnet)
 
 ## ⚖️ This project is licensed under the MIT License.
