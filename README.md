@@ -28,8 +28,34 @@ Consolidate sales and customer data from disparate systems into a single "Source
 * **Historical Scope:** Focuses on the current snapshot; no SCD Type 2 tracking is applied.
 
 ---
+---
 
+## 📂 Repository Structure
+This tree outlines the organization of the SQL scripts and documentation within this project.
 
+```text
+data-warehouse-project/
+│
+├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
+│
+├── docs/                               # Project documentation and architecture details                   
+│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
+│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
+│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
+│   ├── data_models.drawio              # Draw.io file for data models (star schema)
+│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+│
+├── scripts/                            # SQL scripts for ETL and transformations
+│   ├── bronze/                         # Scripts for extracting and loading raw data
+│   ├── silver/                         # Scripts for cleaning and transforming data
+│   ├── gold/                           # Scripts for creating analytical models
+│
+├── tests/                              # Test scripts and quality files
+│
+├── LICENSE                             # License information for the repository
+├── .gitignore                          # Files and directories to be ignored by Git
+└── README.md                           # Project overview and instructions
+```
 ## 🛠️ Tech Stack
 * **Engine:** Microsoft SQL Server
 
