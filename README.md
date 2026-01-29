@@ -39,32 +39,18 @@ data-warehouse-project/
 └── requirements.txt     # Dependencies
 
 ---
-## 🛠️Getting Started
-Prerequisites
-*SQL Server Management Studio (SSMS) or Azure Data Studio.
 
-*Basic understanding of SQL and Data Warehousing.
+## 🛠️ Getting Started
 
-Installation & Setup
-Clone the Repository:
+### Prerequisites
+* **SQL Server Management Studio (SSMS)** or **Azure Data Studio**.
+* Basic understanding of SQL and Data Warehousing concepts.
 
-Bash
-git clone [https://github.com/your-username/data-warehouse-project.git](https://github.com/your-username/data-warehouse-project.git)
-Initialize Database: Run scripts in scripts/bronze/ to create initial tables.
+### Installation & Setup
 
-Load Data: Import CSV files from /datasets into your SQL instance.
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/your-username/data-warehouse-project.git](https://github.com/your-username/data-warehouse-project.git)
 
-Transform: Execute silver scripts followed by gold scripts.
 
----
-
-## 📊 Documentation Links
-Data Catalog - Metadata descriptions.
-
-Naming Conventions - Project standards.
-
----
-
-⚖️ License
-This project is licensed under the MIT License.
 
