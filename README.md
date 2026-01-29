@@ -14,8 +14,6 @@ The project follows the **Medallion Architecture**, ensuring a structured flow o
 * **Silver Layer (Cleaned):** Standardizes data types, handles nulls, and removes duplicates.
 * **Gold Layer (Analytical):** Houses business-ready data modeled into a **Star Schema** optimized for BI tools.
 
-
-
 ---
 
 ## 📖 Key Features & Objectives
@@ -27,6 +25,8 @@ The project follows the **Medallion Architecture**, ensuring a structured flow o
 ---
 
 ## 📂 Repository Structure
+
+```text
 data-warehouse-project/
 ├── datasets/            # Raw ERP and CRM CSV files (Input Data)
 ├── docs/                # Architecture diagrams, ERDs, and Data Catalog
@@ -37,14 +37,6 @@ data-warehouse-project/
 │   ├── silver/          # Cleaning, Deduplication, & Normalization
 │   └── gold/            # Final Star Schema (Facts & Dimensions)
 ├── tests/               # SQL scripts for data validation & quality checks
-├── .gitignore           # Files to exclude from Git (e.g., local logs)
+├── .gitignore           # Files to exclude from Git
 ├── LICENSE              # Legal usage rights (MIT)
 └── requirements.txt     # Environment dependencies
-
-📊 Documentation Links
-Data Catalog – Detailed metadata and field descriptions.
-
-Naming Conventions – Standards used for tables and columns.
-
-⚖️ License
-This project is licensed under the MIT License.
