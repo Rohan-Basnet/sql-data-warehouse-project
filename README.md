@@ -27,35 +27,29 @@ data-warehouse-project/
 │   └── gold/            # Final Star Schema
 ├── tests/               # Quality scripts
 └── requirements.txt     # Dependencies
-🛠️ Getting Started
-1. Prerequisites
-SQL Server Management Studio (SSMS) or Azure Data Studio.
 
-Basic understanding of SQL and Data Warehousing concepts.
+---
 
-2. Installation & Setup
-Step A: Clone the Repository
-Bash
-git clone [https://github.com/your-username/data-warehouse-project.git](https://github.com/your-username/data-warehouse-project.git)
-Step B: Transform & Model
-Run the silver layer scripts to clean and standardize the data.
+```markdown
+---
 
-Run the gold layer scripts to create the final analytical Star Schema.
+## 🛠️ Getting Started
+1. **Prerequisites**: SQL Server Management Studio (SSMS) or Azure Data Studio.
+2. **Installation**: Clone the repository and run the scripts in order: `bronze` -> `silver` -> `gold`.
 
-👤 About Me
-Hi, I'm [Your Name] 👋
-I am a Data Engineering enthusiast focused on building clean, scalable data architectures. I enjoy solving complex logic puzzles and transforming raw data into meaningful business stories.
+---
 
-🔭 Working on: End-to-end SQL Data Warehousing.
+## 👤 About Me
+### Hi, I'm Rohan Basnet 👋
+I am a **Data Engineering enthusiast** focused on building clean, scalable data architectures. I enjoy transforming raw data into meaningful business stories.
 
-🌱 Learning: Cloud Architecture and Python for Data Engineering.
+* **🔭 Working on:** SQL Data Warehousing Projects.
+* **📫 Connect with me:** [LinkedIn](https://linkedin.com/in/rohan-basnet)
 
-📫 Connect with me: LinkedIn | Portfolio
+---
 
-📊 Documentation Links
-Data Catalog – Metadata and field descriptions.
+## 📊 Documentation & License
+* **[Data Catalog](docs/data_catalog.md)** – Metadata and field descriptions.
+* **[Naming Conventions](docs/naming-conventions.md)** – Project standards.
 
-Naming Conventions – Project standards.
-
-⚖️ License
-This project is licensed under the MIT License.
+⚖️ This project is licensed under the **MIT License**.
