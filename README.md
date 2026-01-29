@@ -70,19 +70,19 @@ data-warehouse-project/
 ## 🚀 Getting Started
 * **1. Prerequisites**
 
-SQL Server 2019 or later.
+  SQL Server 2019 or later.
 
-SQL Server Management Studio (SSMS).
+  SQL Server Management Studio (SSMS).
 
 * **2. Deployment**
 
-* **Execute the scripts in the following order:**
+   Execute the scripts in the following order:
 
-* **bronze_layer.sql**: Run this to create the database and load raw data.
+  * **bronze_layer.sql**: Run this to create the database and load raw data.
 
-* **silver_layer.sql**: Run this to cleanse and standardize the raw data.
+  * **silver_layer.sql**: Run this to cleanse and standardize the raw data.
 
-* **gold_layer.sql**: Run this to build the final analytical layer.
+  * **gold_layer.sql**: Run this to build the final analytical layer.
 
 ---
 
