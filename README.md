@@ -32,42 +32,50 @@ Consolidate sales and customer data from disparate systems into a single "Source
 
 
 ## 🛠️ Tech Stack
-* **Engine: Microsoft SQL Server
+* **Engine**: Microsoft SQL Server
 
-* **Interface: SSMS / Azure Data Studio
+* **Interface**: SSMS / Azure Data Studio
 
-* **Language: T-SQL
+* **Language**: T-SQL
 
-Design: Dimensional Modeling
+* **Design**: Dimensional Modeling
 
-🚀 Getting Started
-1. Prerequisites
+---
+
+## 🚀 Getting Started
+* **1. Prerequisites**
 SQL Server 2019 or later.
 
 SQL Server Management Studio (SSMS).
 
-2. Deployment
+* **2. Deployment**
 Execute the scripts in the following order:
 
-01_bronze_layer.sql: Run this to create the database and load raw data.
+* **01_bronze_layer.sql**: Run this to create the database and load raw data.
 
-02_silver_layer.sql: Run this to cleanse and standardize the raw data.
+* **02_silver_layer.sql**: Run this to cleanse and standardize the raw data.
 
-03_gold_layer.sql: Run this to build the final analytical layer.
+* **03_gold_layer.sql**: Run this to build the final analytical layer.
 
-📊 Key Transformations Applied
-Data Cleaning: Used TRIM(), ISNULL(), and CASE statements to handle missing or messy data.
+---
 
-Format Standardization: Converted varied date strings into standard DATE types.
+## 📊 Key Transformations Applied
+* **Data Cleaning**: Used TRIM(), ISNULL(), and CASE statements to handle missing or messy data.
 
-Relationship Mapping: Created Surrogate Keys to link ERP and CRM data efficiently.
+* **Format Standardization**: Converted varied date strings into standard DATE types.
 
-👤 About Me
+* **Relationship Mapping**: Created Surrogate Keys to link ERP and CRM data efficiently.
+
+---
+
+## 👤 About Me
 Hi, I'm Rohan Basnet 👋
 I am a Data Engineering enthusiast focused on building clean, scalable data architectures. I enjoy the challenge of turning raw, messy data into meaningful business stories.
 
-🔭 Working on: Advanced SQL Data Warehousing & ETL Automation.
+* **🔭 Working on**: Advanced SQL Data Warehousing & ETL Automation.
 
-📫 Connect with me: LinkedIn
+--
 
-⚖️ This project is licensed under the MIT License.
+## 📫 Connect with me: LinkedIn
+
+## ⚖️ This project is licensed under the MIT License.
